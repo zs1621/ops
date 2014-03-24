@@ -6,7 +6,7 @@
 
 
 ###章节
- - 登录服务器(ssh相关配置)(TBC)
+ - [登录服务器(ssh相关配置)](https://github.com/zs1621/ops/wiki/ops-%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8(ssh))
  - 服务器用户管理 (TBC)
  - 服务器安装基本服务与软件 (TBC)
  - 服务器安装Nginx (TBC)
