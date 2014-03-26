@@ -13,5 +13,6 @@
  - 服务器安装Mysql(TBC)
  - 服务器python环境配置(TBC)
  - 服务器Nodejs环境配置(TBC)
+ - [服务器Ftp服务搭建(vsftp)]()
 
 
