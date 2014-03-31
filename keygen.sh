@@ -14,19 +14,6 @@ Remote_host_name="" # ssh Remote_host_name
 Local_ssh_config="$HOME/.ssh/config" #local ssh config path
 
 
-if [ -e "$Local_ssh_config" ]; then
-    :
-else
-    touch $Local_ssh_config
-fi
-    
-echo "
-Host $Remote_host_name
-    HostName $HOST
-    Port 22
-    User $USER
-" >> $Local_ssh_config
-
 
 if [ -z $HOST ]; then
     echo "
@@ -41,6 +28,21 @@ if [ -e $dir ]; then
     echo "exists"
 fi
     mkdir -p $dir
+
+if [ -e "$Local_ssh_config" ]; then
+    :
+else
+    touch $Local_ssh_config
+fi
+    
+echo "
+Host $Remote_host_name
+    HostName $HOST
+    Port 22
+    User $USER
+" >> $Local_ssh_config
+
+
 
 
 
