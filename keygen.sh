@@ -7,10 +7,25 @@ dir=$HOME/.ssh
 
 pass1=""
 pass2=""
-email="zs1213yh@gmail.com"
-USER="aoaoftp"
+email="zs1213yh@gmail.com" #your email optional
+USER="root" # remote host user, defaut root
 HOST=$1
+Remote_host_name="" # ssh Remote_host_name 
+Local_ssh_config="$HOME/.ssh/config" #local ssh config path
 
+
+if [ -e "$Local_ssh_config" ]; then
+    :
+else
+    touch $Local_ssh_config
+fi
+    
+echo "
+Host $Remote_host_name
+    HostName $HOST
+    Port 22
+    User $USER
+" >> $Local_ssh_config
 
 
 if [ -z $HOST ]; then
@@ -57,7 +72,7 @@ ensure_passphrase () {
     fi
 }
 
-ensure_passphrase
+#ensure_passphrase
 
 #arrayA=($(find $HOME/.ssh/ -name *.pub | awk '{print $1}'))
 
@@ -90,5 +105,8 @@ else
     fi
 fi
 
+#
+
+
 # tbc 
-ssh $USER@$HOST "cat >> ~/.ssh/authorized_keys" < $HOME/.ssh/id_rsa.pub #把本地生成的公钥添加入远程服务器的authorized_keys
+#ssh $USER@$HOST "cat >> ~/.ssh/authorized_keys" < $HOME/.ssh/id_rsa.pub #把本地生成的公钥添加入远程服务器的authorized_keys
