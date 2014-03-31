@@ -7,7 +7,7 @@ dir=$HOME/.ssh
 
 pass1=""
 pass2=""
-email="zs1213yh@gmail.com" #your email optional
+email="" #your email optional
 USER="root" # remote host user, defaut root
 HOST=$1
 Remote_host_name="" # ssh Remote_host_name 
@@ -72,9 +72,8 @@ ensure_passphrase () {
     fi
 }
 
-#ensure_passphrase
+ensure_passphrase
 
-#arrayA=($(find $HOME/.ssh/ -name *.pub | awk '{print $1}'))
 
 userkey="$HOME/.ssh/id_rsa"
 
@@ -109,4 +108,4 @@ fi
 
 
 # tbc 
-#ssh $USER@$HOST "cat >> ~/.ssh/authorized_keys" < $HOME/.ssh/id_rsa.pub #把本地生成的公钥添加入远程服务器的authorized_keys
+ssh $USER@$HOST "cat >> ~/.ssh/authorized_keys" < $HOME/.ssh/id_rsa.pub #把本地生成的公钥添加入远程服务器的authorized_keys
