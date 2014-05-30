@@ -25,6 +25,7 @@ echo "安装编译环境"
 sudo apt-get install -y g++
 sudo apt-get install -y gcc
 sudo apt-get install -y build-essential
+sudo apt-get install -y curl
 
 #安装 vim
 echo "安装vim"
