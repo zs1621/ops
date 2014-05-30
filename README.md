@@ -16,3 +16,7 @@
  - [服务器Ftp服务搭建(vsftp)](https://github.com/zs1621/ops/wiki/%E6%9C%8D%E5%8A%A1%E5%99%A8Ftp%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA(vsftp))
 
 
+###log
+
+ - add [`install_basic.sh`](https://github.com/zs1621/ops/blob/master/init_basic.sh)
+
