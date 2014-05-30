@@ -1,5 +1,3 @@
-#!/bin/env/bash
-
 
 > 参考 [CNDOE](http://cnodejs.org/topic/5338c5db7cbade005b023c98)
 ##安装node 版本管理 nvm
