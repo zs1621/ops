@@ -10,7 +10,7 @@ pass2=""
 email="" #your email optional
 USER="root" # remote host user, defaut root
 HOST=$1
-Remote_host_name="" # ssh Remote_host_name 
+Remote_host_name="remotehost" # ssh Remote_host_name, default remotehost
 Local_ssh_config="$HOME/.ssh/config" #local ssh config path
 
 
