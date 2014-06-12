@@ -1,6 +1,7 @@
 ##**部署服务器学习笔记系列** 
 ###注意
 - 脚本在只在ubuntu12.04上实验 
+- 部署环境主要针对国类服务器(源之类的)
 - 参考 **[vps-init](https://github.com/averagehuman/vps-init)** 
 
 
