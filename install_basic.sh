@@ -1,19 +1,8 @@
 #! /bin/env/bash
 
-#更新源 163 和 aliyun
+#aliyun
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak  
 sudo echo "
-deb http://mirrors.163.com/ubuntu/ precise main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ precise-security main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ precise-updates main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ precise-proposed main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ precise-backports main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ precise main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ precise-security main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ precise-updates main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ precise-proposed main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ precise-backports main restricted universe multiverse
-
 deb http://mirrors.aliyun.com/ubuntu/ trusty main universe restricted multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty main universe restricted multiverse #Added by software-properties
 " > /etc/apt/sources.list
