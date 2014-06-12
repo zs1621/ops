@@ -111,3 +111,5 @@ fi
 
 # tbc 
 ssh $USER@$HOST "cat >> ~/.ssh/authorized_keys" < $HOME/.ssh/id_rsa.pub #把本地生成的公钥添加入远程服务器的authorized_keys
+
+echo "run success"
