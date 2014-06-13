@@ -22,17 +22,21 @@ else
 vsftpd_version=`dpkg-query -W -f='${Version}\n' vsftpd`
 version_len=`expr match "$vsftpd_version" '[0-9]\.[0-9]\.[0-9]'`
 if [ $version_len -lt 3 ]; then
-    :
-else
-    #卸载vsftpd 但是不移除配置文件
+    #卸载vsftpd 但是不移除配置文件 
     sudo apt-get remove vsftpd 
+    # 这里的升级不一定是vsftpd
+    sudo apt-get update
+    sudo apt-get install vsftpd
+else
+    :
 fi
 
-#sudo add-apt-repository ppa:thefrontiergroup/vsftpd
-#sudo apt-get update
-#sudo apt-get install vsftpd
+if [ -e '/etc/vsftpd.conf' ]; then
+    mv /etc/vsftpd.conf /etc/vsftpd.conf.backup
+else
+    :
+fi
 
-mv /etc/vsftpd.conf /etc/vsftpd.conf.backup
 #write config file
 echo "
 listen=YES
