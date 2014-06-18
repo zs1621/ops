@@ -28,9 +28,9 @@ else
     sudo apt-get remove vsftpd 
 fi
 
-sudo add-apt-repository ppa:thefrontiergroup/vsftpd
-sudo apt-get update
-sudo apt-get install vsftpd
+#sudo add-apt-repository ppa:thefrontiergroup/vsftpd
+#sudo apt-get update
+#sudo apt-get install vsftpd
 
 mv /etc/vsftpd.conf /etc/vsftpd.conf.backup
 #write config file
