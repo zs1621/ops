@@ -3,6 +3,7 @@
 - 脚本在只在ubuntu12.04上实验 
 - 部署环境主要针对国类服务器(源之类的)
 - 参考 **[vps-init](https://github.com/averagehuman/vps-init)** 
+- python,Nodejs环境部署更偏向开发环境
 
 
 ###章节
@@ -11,9 +12,9 @@
  - 服务器安装基本服务与软件 (TBC)
  - 服务器安装Nginx (TBC)
  - 服务器安装Mysql(TBC)
- - [服务器python环境配置](https://github.com/zs1621/ops/blob/master/web_dev_env/init_python.sh)
- - [服务器Nodejs环境配置](https://github.com/zs1621/ops/blob/master/web_dev_env/init_node.markdown)
- - [服务器Ftp服务搭建(vsftp)](https://github.com/zs1621/ops/wiki/%E6%9C%8D%E5%8A%A1%E5%99%A8Ftp%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA(vsftp))
+ - [python环境配置](https://github.com/zs1621/ops/blob/master/web_dev_env/init_python.sh)
+ - [Nodejs环境配置](https://github.com/zs1621/ops/blob/master/web_dev_env/init_node.markdown)
+ - [Ftp服务搭建(vsftp)](https://github.com/zs1621/ops/wiki/%E6%9C%8D%E5%8A%A1%E5%99%A8Ftp%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA(vsftp))
 
 
 ###log
