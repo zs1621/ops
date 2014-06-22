@@ -15,6 +15,7 @@ echo "
 export NVM_NODEJS_ORG_MIRROR=http://dist.u.qiniudn.com
 source ~/git/nvm/nvm.sh
 " >> .bashrc
+exec bash
 ```
 
 ###用nvm安装v0.10.26
