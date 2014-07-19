@@ -14,8 +14,8 @@ ftp="ftp"
 if [ -d $path ]; then
     :
 else
-        mkdir $path
-    fi
+    mkdir -pv $path
+fi
 
 
 #参考[vsftp](http://blog.thefrontiergroup.com.au/2012/10/making-vsftpd-with-chrooted-users-work-again/)
@@ -91,7 +91,7 @@ chown -R $ftp_user_name $path
 pid=`pgrep vsftpd`
 
 if [ -z $pid ]; then
-    echo "vsftpd run fail"
+    echo -e "\033[1;40;31mvsftpd run fail.\n\033[0m"
 else
-    echo "vsftpd run success"
+    echo -e "\033[40;32mvsftpd run success.\n\033[0m"
 fi
