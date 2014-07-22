@@ -33,6 +33,13 @@ fi
 passwd -l $DEVUSER
 
 
+##################################
+# add .ssh/authorized_keys for root
+###################################
+
+mkdir -p $HOME/.ssh
+touch $HOME/.ssh/authorized_keys
+
 ############################
 # ssh-keygen for github
 ###########################
