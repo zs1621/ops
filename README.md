@@ -21,3 +21,8 @@
 
  - add [`install_basic.sh`](https://github.com/zs1621/ops/blob/master/init_basic.sh)
 
+
+
+
+##简单部署步骤
+ - [戳我](https://github.com/zs1621/ops/wiki/%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4)
