@@ -8,8 +8,8 @@
 
 ###章节
  - [登录服务器(ssh相关配置)](https://github.com/zs1621/ops/wiki/ops-%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8(ssh))
- - 服务器用户管理 (TBC)
- - 服务器安装基本服务与软件 (TBC)
+ - [服务器添加部署用户] (https://github.com/zs1621/ops/blob/master/add_dev_user.sh)
+ - [服务器安装基本服务与软件] (https://github.com/zs1621/ops/blob/master/install_basic.sh)
  - 服务器安装Nginx (TBC)
  - 服务器安装Mysql(TBC)
  - [python环境配置](https://github.com/zs1621/ops/blob/master/web_dev_env/init_python.sh)

@@ -9,15 +9,18 @@ pass1=""
 pass2=""
 email="" #your email optional
 USER="root" # remote host user, defaut root
+DEVUSER="dev" # 远程服务器的开发用户, defaut dev
 HOST=$1
 Remote_host_name="remotehost" # ssh Remote_host_name, default remotehost
+Remote_host_dev_name="remotedevhost" # ssh Remote_host_dev_name, default dev 
 Local_ssh_config="$HOME/.ssh/config" #local ssh config path
 
 
 
+
 if [ -z $HOST ]; then
-    echo "
-        useage: sh keygen.sh yourhostname(10.10.10.10)
+    echo -e "
+        \033[40;32museage: sh keygen.sh yourhostname(10.10.10.10)\n\033[40;37m
     "
     exit 1
 fi
@@ -35,6 +38,7 @@ else
     touch $Local_ssh_config
 fi
     
+# 把远程root和dev加入 ssh/config
 echo "
 Host $Remote_host_name
     HostName $HOST
@@ -42,6 +46,12 @@ Host $Remote_host_name
     User $USER
 " >> $Local_ssh_config
 
+echo "
+Host $Remote_host_dev_name
+    HostName $HOST
+    Port 22
+    User $DEVUSER
+" >> $Local_ssh_config
 
 
 
@@ -110,6 +120,10 @@ fi
 
 
 # tbc 
+echo -e "\033[40;32m本地key加入root.\n\033[0m"
 ssh $USER@$HOST "cat >> ~/.ssh/authorized_keys" < $HOME/.ssh/id_rsa.pub #把本地生成的公钥添加入远程服务器的authorized_keys
 
-echo "run success"
+echo - e "\033[40;32m本地key加入$DEVUSER \n\033[0m"
+ssh $USER@$HOST "cat >> /home/$DEVUSER/.ssh/authorized_keys" < $HOME/.ssh/id_rsa.pub #把本地生成的公钥加入到远程服务器的dev的authorized_keys
+
+echo -e "\033[40;32mrun success\n\033[0m"
