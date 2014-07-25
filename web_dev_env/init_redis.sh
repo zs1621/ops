@@ -44,6 +44,9 @@ cd utils
 sed -i 's/_\${REDIS_PORT}//g' install_server.sh
 sed -i 's/_\$REDIS_PORT//g' install_server.sh
 
+# vm.overcommit
+echo "vm.overcommit_memory" >> /etc/sysctl.conf
+sysctl vm.overcommit_memory=1
 
 sh install_server.sh
 
