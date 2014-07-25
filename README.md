@@ -12,6 +12,7 @@
  - [服务器安装基本服务与软件] (https://github.com/zs1621/ops/blob/master/install_basic.sh)
  - 服务器安装Nginx (TBC)
  - 服务器安装Mysql(TBC)
+ - [服务器安装Redis](https://github.com/zs1621/ops/blob/master/web_dev_env/init_redis.sh)
  - [python环境配置](https://github.com/zs1621/ops/blob/master/web_dev_env/init_python.sh)
  - [Nodejs环境配置](https://github.com/zs1621/ops/blob/master/web_dev_env/init_node.markdown)
  - [Ftp服务搭建(vsftp)](https://github.com/zs1621/ops/wiki/%E6%9C%8D%E5%8A%A1%E5%99%A8Ftp%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA(vsftp))
@@ -20,9 +21,11 @@
 ###log
 
  - add [`install_basic.sh`](https://github.com/zs1621/ops/blob/master/init_basic.sh)
+ - add [`init_redis.sh`](https://github.com/zs1621/ops/blob/master/web_dev_en/init_redis.sh)
 
 
 
 
 ##简单部署步骤
  - [戳我](https://github.com/zs1621/ops/wiki/%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4)
+
