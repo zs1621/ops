@@ -10,10 +10,10 @@ redisVersion="2.8.13"
 #a prepare for install redis 
 ##############################
 
-apt-get install build-essential -y
+apt-get install build-essential
 
 
-apt-get install tcl8.5 -y
+apt-get install tcl8.5
 
 
 
