@@ -11,7 +11,7 @@
  - [服务器添加部署用户] (https://github.com/zs1621/ops/blob/master/add_dev_user.sh)
  - [服务器安装基本服务与软件] (https://github.com/zs1621/ops/blob/master/install_basic.sh)
  - 服务器安装Nginx (TBC)
- - 服务器安装Mysql(TBC)
+ - [服务器安装Mysql](https://github.com/zs1621/ops/blob/master/web_dev_env/i    nit_mysql.markdown)
  - [服务器安装Redis](https://github.com/zs1621/ops/blob/master/web_dev_env/init_redis.sh)
  - [python环境配置](https://github.com/zs1621/ops/blob/master/web_dev_env/init_python.sh)
  - [Nodejs环境配置](https://github.com/zs1621/ops/blob/master/web_dev_env/init_node.markdown)
