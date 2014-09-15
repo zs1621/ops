@@ -1,3 +1,11 @@
+#!/usr/bin/env/bash
+
+##############################
+# install supervisor on ubuntu
+##############################
+
+set -e
+
 # install supervisor (pip > 1.4, pip --version)
 pip install supervisor --pre
 # default config file 
