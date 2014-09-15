@@ -2,15 +2,20 @@
 
 
 ############################
-# install nginx
+# install nginx on ubuntu
 #############################
 
-nginx_version="1.4.3"
 
+codename="trusty"
 
-sudo apt-get -y install libpcre3-dev zlib1g-dev libssl-dev
+#TODO check ubuntu version get codename
+echo "
+deb http://nginx.org/packages/ubuntu/ ${codename} nginx
+deb-src http://nginx.org/packages/ubuntu/ ${codename} nginx
+" >> /etc/apt/source.list
 
-
-prefix="/srv/nginx"
-
-if  T
+wget http://nginx.org/keys/nginx_signing.key
+sudo apt-key add nginx_signing.key
+apt-get update
+apt-get install nginx
+nginx -v
