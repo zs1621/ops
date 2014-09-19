@@ -1,10 +1,20 @@
 #!/bin/env/bash
 
 # [参考](http://roundhere.net/journal/virtualenv-ubuntu-12-10/)
+# [参考2](http://xiaocong.github.io/blog/2013/06/18/customize-python-dev-environment-on-ubuntu/)
+# [参考3](http://brotherb.info/2013/10/30/setup-python-env/)
 
 # 运行须知
 # 1 这个脚本一般在首次部署环境时有效
 # 2 这个脚本安装了 pip  , 改变了pip的源到豆瓣, 安装了virtualenv, virtualenvwrapper . 运行成功后一般 用 mkvirtualenv 创建隔离的python环境
+
+
+echo "安装python运行需要的常用软件"
+#安装 Python 发布版本，dev包必须安装，很多用pip安装包都需要编译
+sudo apt-get install python-dev python2.7-dev python3.2-dev
+# 很多pip安装需要libssl 和libevent编译环境
+sudo apt-get install build-essential libssl-dev libevent-dev libjpeg-dev libxml2-dev libxslt-dev
+
 echo "安装setup tools"
 
 sudo apt-get install python-setuptools
