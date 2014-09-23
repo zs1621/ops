@@ -1,5 +1,6 @@
 #!/usr/bin/env/bash
 
+#此脚本不做生产环境用，只供参考
 ###################################
 ##  install version mysql-5.6.20 ##
 ## 参考 [安装](https://rtcamp.com/tutorials/mysql/mysql-5-6-ubuntu-12-04/)

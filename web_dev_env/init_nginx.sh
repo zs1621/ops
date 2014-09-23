@@ -1,6 +1,7 @@
 #!/usr/bin/env/bash
 
 
+## 注意这个脚本只是参考不做生产环境用
 ############################
 # install nginx on ubuntu
 #############################
@@ -23,6 +24,7 @@ nginx -v
 
 ###########################
 # compile nginx
+# 参考[安装](http://hi.baidu.com/yhfaith/item/0cd0ef818136a6844414cfa1)
 ##########################
 
 version="1.6.1"
