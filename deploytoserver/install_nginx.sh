@@ -25,7 +25,7 @@ nginx -v
 nginx -V
 
 
-adduser --system --no-create-home --disabled-login --disabled-password --group nginx
+adduser --system --no-create-home --disabled-login --disabled-password --group nginx  #add nginx user
 
 
 curl -O https://raw.githubusercontent.com/zs1621/ops/master/web_dev_env/nginx

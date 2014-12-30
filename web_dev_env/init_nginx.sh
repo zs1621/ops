@@ -53,3 +53,14 @@ nginx -v
 
 nginx -V
 
+
+adduser --system --no-create-home --disabled-login --disabled-password --group nginx  #add nginx user
+
+# auto restart nginx  script
+curl -O https://raw.githubusercontent.com/zs1621/ops/master/web_dev_env/nginx
+cp nginx /etc/init.d/nginx
+chmod +x /etc/init.d/nginx
+update-rc.d -f nginx defaults
+service nginx start
+ps aux  | grep nginx
+
