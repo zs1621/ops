@@ -1,3 +1,5 @@
+set  -e
+
 version="1.7.9"
 
 # install need 
@@ -17,6 +19,19 @@ make
 
 make install
 
+
 nginx -v
 
 nginx -V
+
+
+adduser --system --no-create-home --disabled-login --disabled-password --group nginx
+
+
+curl -O https://raw.githubusercontent.com/zs1621/ops/master/web_dev_env/nginx
+cp nginx /etc/init.d/nginx
+chmod +x /etc/init.d/nginx
+update-rc.d -f nginx defaults
+service nginx start
+ps aux  | grep nginx
+
