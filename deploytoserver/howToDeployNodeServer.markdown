@@ -9,7 +9,7 @@
  -  [将本地公钥加到远程部署用户的authorized_key](https://github.com/zs1621/ops/blob/master/keygen.sh)
 
 
-##安装node,cnpm 
+##[server]安装node,cnpm  [install_node.sh](https://github.com/zs1621/ops/tree/master/deploytoserver/install_node.sh)
 
 ```
 #!/usr/bin/env/bash
@@ -51,15 +51,16 @@ echo `cnpm -v`
  - [server]进入部署帐号
  - [server] `echo 'export NODE_ENV="production"' >> ~/.profile`
  - [server] `cat $HOME/.ssh/id_rsa.pub`
+ - [server] `ssh-keygen -t rsa`
  - [server] 将其加入你托管代码的服务器(github, gitoschina....)
  - [server] `ssh -T git@github.com` 检测是否已经加入github
- - [server] `chown -R devi:devi $HOME/devi`
+ - [server] `chown -R devi:devi $HOME/devi`  root权限执行
 
 
-##将upstart  服务器程序自启动
+##[server]将upstart  服务器程序自启动 需要root权限  见[init_node.sh](https://github.com/zs1621/ops/tree/master/deploytoserver/init_node.sh), *注意下面的/home/devi要改为你的部署用户目录*
 
 ```
-# cat <<'EOF' > /etc/init/node.conf 
+cat <<'EOF' > /etc/init/node.conf 
 description "node server"
 
 start on filesystem or runlevel [2345]
